@@ -22,7 +22,7 @@ public class SpaceInvaders {
 			
 			for (int x = 0; x < longueur; x++) {
 				
-				if (vaisseau!=null && vaisseau.occupeLaPosition(x, y))
+				if (this.aUnVaisseauQuiOccupeLaPosition(x, y))
 					espaceDeJeu.append('V');
 				else
 					espaceDeJeu.append('.');
@@ -34,6 +34,18 @@ public class SpaceInvaders {
 		}
 		
 		return espaceDeJeu.toString();
+		
+	}
+
+	private boolean aUnVaisseauQuiOccupeLaPosition(int x, int y) {
+		
+		return this.aUnVaisseau() && vaisseau.occupeLaPosition(x, y);
+		
+	}
+
+	private boolean aUnVaisseau() {
+		
+		return vaisseau != null;
 		
 	}
 
