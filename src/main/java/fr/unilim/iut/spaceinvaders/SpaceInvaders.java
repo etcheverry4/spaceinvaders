@@ -4,6 +4,7 @@ public class SpaceInvaders {
 
     int longueur;
     int hauteur;
+    Vaisseau vaisseau;
 
     public SpaceInvaders(int longueur, int hauteur) {
     	
@@ -18,6 +19,7 @@ public class SpaceInvaders {
 		StringBuilder espaceDeJeu = new StringBuilder();
 		
 		for (int i = 0; i < hauteur; i++) {
+			
 			for (int j = 0; j < longueur; j++) {
 				
 				espaceDeJeu.append('.');
@@ -31,4 +33,10 @@ public class SpaceInvaders {
 		return espaceDeJeu.toString();
 	}
 
+    public void positionnerUnNouveauVaisseau(int x, int y) {
+    	
+        this.vaisseau = new Vaisseau(x, y);
+
+	}
+    
 }
