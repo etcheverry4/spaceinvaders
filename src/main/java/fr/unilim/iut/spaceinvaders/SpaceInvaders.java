@@ -18,11 +18,14 @@ public class SpaceInvaders {
     	
 		StringBuilder espaceDeJeu = new StringBuilder();
 		
-		for (int i = 0; i < hauteur; i++) {
+		for (int y = 0; y < hauteur; y++) {
 			
-			for (int j = 0; j < longueur; j++) {
+			for (int x = 0; x < longueur; x++) {
 				
-				espaceDeJeu.append('.');
+				if (vaisseau!=null && vaisseau.occupeLaPosition(x, y))
+					espaceDeJeu.append('V');
+				else
+					espaceDeJeu.append('.');
 				
 			}
 			
@@ -31,6 +34,7 @@ public class SpaceInvaders {
 		}
 		
 		return espaceDeJeu.toString();
+		
 	}
 
     public void positionnerUnNouveauVaisseau(int x, int y) {
