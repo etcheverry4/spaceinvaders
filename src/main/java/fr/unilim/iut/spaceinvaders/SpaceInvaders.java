@@ -22,10 +22,9 @@ public class SpaceInvaders {
 			
 			for (int x = 0; x < longueur; x++) {
 				
-				if (this.aUnVaisseauQuiOccupeLaPosition(x, y))
-					espaceDeJeu.append('V');
-				else
-					espaceDeJeu.append('.');
+				char marque = recupererMarqueDeLaPosition(x, y);
+				
+			    espaceDeJeu.append(marque);
 				
 			}
 			
@@ -34,6 +33,19 @@ public class SpaceInvaders {
 		}
 		
 		return espaceDeJeu.toString();
+		
+	}
+
+	private char recupererMarqueDeLaPosition(int x, int y) {
+		
+		char marque;
+		
+		if (this.aUnVaisseauQuiOccupeLaPosition(x, y))
+		      marque='V';
+		else
+		      marque='.';
+		
+		return marque;
 		
 	}
 
