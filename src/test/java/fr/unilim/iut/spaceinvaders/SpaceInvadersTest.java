@@ -19,7 +19,7 @@ public class SpaceInvadersTest {
 	    "...............\n" + 
 	    "...............\n" + 
 	    "...............\n" + 
-	    "...............\n" , spaceinvaders.toString());
+	    "...............\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
     
    }
    
@@ -38,7 +38,7 @@ public class SpaceInvadersTest {
 		"...............\n" + 
 		"...............\n" + 
 		"...............\n" + 
-		".......V.......\n" , spaceinvaders.toString());
+		".......V.......\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
 		
 	}
 
